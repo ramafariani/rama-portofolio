@@ -10,165 +10,248 @@
 
 <style>
 :root{
---primary:#000;
+--primary:#0f172a;
 --secondary:#d4af37;
---light:#fffaf5;
---gradient:linear-gradient(135deg,#000,#d4af37);
+--bg:#f8fafc;
+--white:#fff;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:var(--light);color:var(--primary)}
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--primary);
+line-height:1.6;
+}
+
+/* NAVBAR */
 header{
-background:var(--gradient);
-padding:15px 8%;
 position:fixed;
 width:100%;
 top:0;
+background:var(--white);
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:100;
 }
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+nav h2{
+font-size:18px;
+}
+
 nav ul{
 list-style:none;
 display:flex;
-justify-content:center;
 gap:20px;
 }
+
 nav a{
-color:#fff;
 text-decoration:none;
+color:var(--primary);
+font-size:14px;
+}
+
+/* CONTAINER */
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
 }
 
 /* HERO */
 .hero{
-padding:150px 20px 100px;
-background:var(--gradient);
-color:#fff;
-text-align:center;
+padding-top:120px;
+padding-bottom:80px;
 }
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
 .hero img{
-width:180px;
+width:220px;
 border-radius:50%;
-margin-bottom:20px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+color:#555;
 }
 
 /* SECTION */
 section{
-padding:80px 10%;
-text-align:center;
-}
-h3{
-margin-bottom:20px;
+padding:70px 0;
 }
 
-/* GRID */
+.section-title{
+text-align:center;
+margin-bottom:40px;
+font-size:24px;
+}
+
+/* CARD */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARD */
 .card{
-background:#fff;
+background:var(--white);
 padding:20px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+text-align:left;
+}
+
+/* CONTACT */
+.contact p{
+margin:8px 0;
 }
 
 /* FOOTER */
 footer{
-background:var(--gradient);
-color:#fff;
-padding:20px;
 text-align:center;
+padding:20px;
+background:#0f172a;
+color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+.hero-text{
+max-width:100%;
+}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
-<nav>
+<nav class="container">
+<h2>Rama.</h2>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#portfolio">Portofolio</a></li>
-<li><a href="#business">Business Idea</a></li>
+<li><a href="#business">Business</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
-<!-- HOME -->
-<section class="hero" id="home">
-<img src="images/foto.jpg" alt="Foto Rama">
-<h2>Rama Fariani</h2>
-<p>Mahasiswa & Entrepreneur | Pengembang UMKM & Ide Bisnis Kreatif</p>
+<!-- HERO -->
+<section class="hero container" id="home">
+<div class="hero-content">
+<img src="images/foto.jpg">
+<div class="hero-text">
+<h1>Rama Fariani</h1>
+<p>Mahasiswa & Entrepreneur yang fokus pada pengembangan UMKM, inovasi produk, dan strategi bisnis.</p>
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h3>About Me</h3>
+<div class="container">
+<h2 class="section-title">About Me</h2>
 <div class="card">
-<p><strong>Biodata:</strong> Saya adalah mahasiswa yang memiliki minat dalam bisnis dan pengembangan UMKM, khususnya pada usaha keluarga.</p>
+<p><strong>Biodata:</strong> Mahasiswa yang aktif mengembangkan usaha keluarga.</p>
 <p><strong>Pendidikan:</strong> Mahasiswa aktif</p>
-<p><strong>Minat & Keahlian:</strong> Bisnis, pemasaran, inovasi produk, manajemen keuangan UMKM</p>
+<p><strong>Minat:</strong> Bisnis, pemasaran, inovasi produk</p>
+</div>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h3>Skills</h3>
+<div class="container">
+<h2 class="section-title">Skills</h2>
 <div class="grid">
 <div class="card">
 <h4>Public Speaking</h4>
-<p>Mampu menyampaikan ide dan presentasi dengan percaya diri</p>
+<p>Mampu presentasi dan komunikasi dengan baik</p>
+</div>
 </div>
 </div>
 </section>
 
 <!-- PORTOFOLIO -->
 <section id="portfolio">
-<h3>Portofolio</h3>
+<div class="container">
+<h2 class="section-title">Portofolio</h2>
 <div class="grid">
 
 <div class="card">
-<h4>Usaha Bumbu Giling Minang</h4>
-<p>Mengelola bisnis keluarga "Bumbu Giling Minang Uda Boim"</p>
+<h4>Bumbu Giling Minang Uda Boim</h4>
+<p>Mengelola dan mengembangkan usaha bumbu giling keluarga</p>
 </div>
 
 <div class="card">
 <h4>Usaha Dimsum</h4>
-<p>Mengembangkan usaha makanan dimsum dengan strategi pemasaran sederhana</p>
+<p>Menjalankan usaha makanan dengan strategi pemasaran sederhana</p>
 </div>
 
+</div>
 </div>
 </section>
 
-<!-- BUSINESS IDEA -->
+<!-- BUSINESS -->
 <section id="business">
-<h3>Business Idea</h3>
+<div class="container">
+<h2 class="section-title">Business Idea</h2>
 <div class="card">
-<p><strong>Nama Startup:</strong> Rama Signature Abaya</p>
-<p><strong>Produk:</strong> Abaya modern elegan untuk muslimah</p>
-<p><strong>Target Pasar:</strong> Wanita muslim usia 18–40 tahun</p>
-<p><strong>Value Proposition:</strong> Desain premium, stylish, nyaman, dan harga terjangkau</p>
+<p><strong>Startup:</strong> Rama Signature Abaya</p>
+<p><strong>Produk:</strong> Abaya modern</p>
+<p><strong>Target:</strong> Wanita muslim 18–40 tahun</p>
+<p><strong>Value:</strong> Stylish, premium, harga terjangkau</p>
+</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h3>Contact</h3>
-<div class="card">
+<div class="container contact">
+<h2 class="section-title">Contact</h2>
 <p>Email: ramafrin28@gmail.com</p>
-<p>No HP: 088298776166</p>
+<p>HP: 088298776166</p>
 <p>Instagram: ram_fr_99</p>
 <p>TikTok: @rm_frin</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Rama Fariani - Portofolio Pribadi</p>
+<p>© 2026 Rama Fariani</p>
 </footer>
 
 </body>
