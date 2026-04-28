@@ -8,15 +8,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 <style>
 :root{
 --primary:#2563eb;
 --dark:#0f172a;
 --gray:#64748b;
 --light:#f8fafc;
+--white:#ffffff;
 }
 
 *{
@@ -50,7 +48,9 @@ align-items:center;
 padding:15px 8%;
 }
 
-nav h2{color:var(--primary);}
+nav h2{
+color:var(--primary);
+}
 
 nav ul{
 display:flex;
@@ -62,6 +62,11 @@ nav a{
 text-decoration:none;
 color:var(--dark);
 font-size:14px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--primary);
 }
 
 /* HERO */
@@ -71,17 +76,36 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:0 20px;
+}
+
+.hero-content{
+max-width:700px;
 }
 
 .hero h1{
 font-size:40px;
+font-weight:700;
 }
 
-.hero span{color:var(--primary);}
+.hero span{
+color:var(--primary);
+}
 
 .hero p{
 margin-top:15px;
 color:var(--gray);
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:var(--primary);
+color:#fff;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
 }
 
 /* SECTION */
@@ -102,13 +126,9 @@ margin-bottom:40px;
 font-size:28px;
 }
 
-/* CARD */
-.card{
-background:#fff;
-padding:25px;
-border-radius:12px;
-border:1px solid #eee;
-margin-bottom:20px;
+.section-title p{
+color:var(--gray);
+margin-top:5px;
 }
 
 /* GRID */
@@ -118,29 +138,28 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-/* PROGRESS BAR */
-.skill-box{
-margin-bottom:20px;
+/* CARD */
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+border:1px solid #eee;
+transition:.3s;
 }
 
-.skill-title{
-display:flex;
-justify-content:space-between;
-margin-bottom:5px;
-font-size:14px;
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-.progress{
-background:#e5e7eb;
-border-radius:10px;
-overflow:hidden;
-}
-
-.progress-bar{
-height:10px;
-background:var(--primary);
-width:0;
-transition:1s;
+/* SKILL */
+.skill{
+padding:12px;
+background:#e0ecff;
+border-radius:8px;
+text-align:center;
+color:var(--primary);
+font-weight:500;
 }
 
 /* FOOTER */
@@ -148,12 +167,14 @@ footer{
 text-align:center;
 padding:30px;
 color:var(--gray);
+font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
 <nav>
 <h2>Rama</h2>
@@ -170,22 +191,27 @@ color:var(--gray);
 
 <!-- HERO -->
 <section class="hero" id="home">
-<div data-aos="fade-up">
+<div class="hero-content">
 <h1>Hi, I'm <span>Rama Fariani</span></h1>
-<p>Mahasiswa & Entrepreneur fokus pada pengembangan UMKM</p>
+<p>Mahasiswa & Entrepreneur yang fokus pada pengembangan UMKM dan inovasi bisnis kreatif</p>
+<a href="#portfolio" class="btn">Lihat Portofolio</a>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<div class="container" data-aos="fade-right">
+<div class="container">
 <div class="section-title">
 <h2>About Me</h2>
+<p>Perkenalan singkat tentang saya</p>
 </div>
 
 <div class="card">
-<p>Saya fokus pada pengembangan bisnis UMKM dan inovasi produk.</p>
+<p>Saya adalah mahasiswa yang memiliki minat besar dalam dunia bisnis dan pengembangan UMKM. 
+Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
+<br>
 <p><strong>Pendidikan:</strong> Mahasiswa aktif</p>
+<p><strong>Fokus:</strong> Bisnis, pemasaran, inovasi produk</p>
 </div>
 </div>
 </section>
@@ -193,42 +219,15 @@ color:var(--gray);
 <!-- SKILLS -->
 <section id="skills">
 <div class="container">
-<div class="section-title" data-aos="fade-up">
+<div class="section-title">
 <h2>Skills</h2>
 </div>
 
-<div class="card" data-aos="fade-up">
-
-<div class="skill-box">
-<div class="skill-title">
-<span>Public Speaking</span>
-<span>85%</span>
-</div>
-<div class="progress">
-<div class="progress-bar" data-width="85%"></div>
-</div>
-</div>
-
-<div class="skill-box">
-<div class="skill-title">
-<span>Business Strategy</span>
-<span>80%</span>
-</div>
-<div class="progress">
-<div class="progress-bar" data-width="80%"></div>
-</div>
-</div>
-
-<div class="skill-box">
-<div class="skill-title">
-<span>Marketing</span>
-<span>75%</span>
-</div>
-<div class="progress">
-<div class="progress-bar" data-width="75%"></div>
-</div>
-</div>
-
+<div class="grid">
+<div class="skill">Public Speaking</div>
+<div class="skill">Business Strategy</div>
+<div class="skill">Marketing</div>
+<div class="skill">Product Development</div>
 </div>
 </div>
 </section>
@@ -236,43 +235,46 @@ color:var(--gray);
 <!-- PORTFOLIO -->
 <section id="portfolio">
 <div class="container">
-<div class="section-title" data-aos="fade-up">
+<div class="section-title">
 <h2>My Work</h2>
+<p>Beberapa project yang saya kerjakan</p>
 </div>
 
 <div class="grid">
 
-<div class="card" data-aos="zoom-in">
+<div class="card">
 <h4>Bumbu Giling Minang</h4>
-<p>Mengelola usaha keluarga</p>
+<p>Mengelola dan mengembangkan usaha keluarga dengan strategi pemasaran sederhana</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="card">
 <h4>Usaha Dimsum</h4>
-<p>Pengembangan bisnis kuliner</p>
+<p>Mengembangkan bisnis kuliner dengan inovasi produk dan pemasaran</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- BUSINESS -->
+<!-- BUSINESS IDEA -->
 <section id="business">
-<div class="container" data-aos="fade-left">
+<div class="container">
 <div class="section-title">
 <h2>Business Idea</h2>
 </div>
 
 <div class="card">
 <p><strong>Startup:</strong> Rama Signature Abaya</p>
-<p><strong>Produk:</strong> Abaya modern</p>
+<p><strong>Produk:</strong> Abaya modern elegan</p>
+<p><strong>Target:</strong> Wanita muslim usia 18–40</p>
+<p><strong>Value:</strong> Stylish, premium, harga terjangkau</p>
 </div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<div class="container" data-aos="fade-up">
+<div class="container">
 <div class="section-title">
 <h2>Contact</h2>
 </div>
@@ -280,6 +282,8 @@ color:var(--gray);
 <div class="card">
 <p>Email: ramafrin28@gmail.com</p>
 <p>HP: 088298776166</p>
+<p>Instagram: ram_fr_99</p>
+<p>TikTok: @rm_frin</p>
 </div>
 </div>
 </section>
@@ -287,25 +291,6 @@ color:var(--gray);
 <footer>
 <p>© 2026 Rama Fariani</p>
 </footer>
-
-<!-- AOS SCRIPT -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init();
-
-// ANIMASI PROGRESS BAR
-const bars = document.querySelectorAll('.progress-bar');
-
-window.addEventListener('scroll', () => {
-bars.forEach(bar => {
-let rect = bar.getBoundingClientRect();
-if(rect.top < window.innerHeight){
-bar.style.width = bar.dataset.width;
-}
-});
-});
-</script>
 
 </body>
 </html>
