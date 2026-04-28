@@ -8,6 +8,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 :root{
 --primary:#2563eb;
@@ -62,10 +65,10 @@ nav a{
 text-decoration:none;
 color:var(--dark);
 font-size:14px;
-transition:.3s;
 }
 
-nav a:hover{
+nav a i{
+margin-right:5px;
 color:var(--primary);
 }
 
@@ -76,11 +79,17 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+flex-direction:column;
 padding:0 20px;
 }
 
-.hero-content{
-max-width:700px;
+.hero img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+border:4px solid var(--primary);
 }
 
 .hero h1{
@@ -128,7 +137,6 @@ font-size:28px;
 
 .section-title p{
 color:var(--gray);
-margin-top:5px;
 }
 
 /* GRID */
@@ -154,12 +162,24 @@ box-shadow:0 10px 25px rgba(0,0,0,0.05);
 
 /* SKILL */
 .skill{
-padding:12px;
+padding:15px;
 background:#e0ecff;
-border-radius:8px;
+border-radius:10px;
 text-align:center;
 color:var(--primary);
 font-weight:500;
+}
+
+.skill i{
+font-size:20px;
+margin-bottom:8px;
+display:block;
+}
+
+/* CONTACT ICON */
+.contact p i{
+margin-right:8px;
+color:var(--primary);
 }
 
 /* FOOTER */
@@ -179,23 +199,22 @@ font-size:14px;
 <nav>
 <h2>Rama</h2>
 <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#portfolio">Work</a></li>
-<li><a href="#business">Idea</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+<li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+<li><a href="#skills"><i class="fa-solid fa-lightbulb"></i>Skills</a></li>
+<li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+<li><a href="#business"><i class="fa-solid fa-rocket"></i>Idea</a></li>
+<li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
 </ul>
 </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-<div class="hero-content">
+<img src="images/foto.jpg" alt="Foto Rama">
 <h1>Hi, I'm <span>Rama Fariani</span></h1>
 <p>Mahasiswa & Entrepreneur yang fokus pada pengembangan UMKM dan inovasi bisnis kreatif</p>
 <a href="#portfolio" class="btn">Lihat Portofolio</a>
-</div>
 </section>
 
 <!-- ABOUT -->
@@ -207,9 +226,7 @@ font-size:14px;
 </div>
 
 <div class="card">
-<p>Saya adalah mahasiswa yang memiliki minat besar dalam dunia bisnis dan pengembangan UMKM. 
-Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
-<br>
+<p>Saya adalah mahasiswa yang memiliki minat besar dalam dunia bisnis dan pengembangan UMKM.</p>
 <p><strong>Pendidikan:</strong> Mahasiswa aktif</p>
 <p><strong>Fokus:</strong> Bisnis, pemasaran, inovasi produk</p>
 </div>
@@ -224,10 +241,10 @@ Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
 </div>
 
 <div class="grid">
-<div class="skill">Public Speaking</div>
-<div class="skill">Business Strategy</div>
-<div class="skill">Marketing</div>
-<div class="skill">Product Development</div>
+<div class="skill"><i class="fa-solid fa-microphone"></i>Public Speaking</div>
+<div class="skill"><i class="fa-solid fa-chart-line"></i>Business Strategy</div>
+<div class="skill"><i class="fa-solid fa-bullhorn"></i>Marketing</div>
+<div class="skill"><i class="fa-solid fa-box"></i>Product Development</div>
 </div>
 </div>
 </section>
@@ -237,26 +254,23 @@ Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
 <div class="container">
 <div class="section-title">
 <h2>My Work</h2>
-<p>Beberapa project yang saya kerjakan</p>
 </div>
 
 <div class="grid">
-
 <div class="card">
 <h4>Bumbu Giling Minang</h4>
-<p>Mengelola dan mengembangkan usaha keluarga dengan strategi pemasaran sederhana</p>
+<p>Mengelola usaha keluarga</p>
 </div>
 
 <div class="card">
 <h4>Usaha Dimsum</h4>
-<p>Mengembangkan bisnis kuliner dengan inovasi produk dan pemasaran</p>
+<p>Mengembangkan bisnis kuliner</p>
 </div>
-
 </div>
 </div>
 </section>
 
-<!-- BUSINESS IDEA -->
+<!-- BUSINESS -->
 <section id="business">
 <div class="container">
 <div class="section-title">
@@ -267,7 +281,7 @@ Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
 <p><strong>Startup:</strong> Rama Signature Abaya</p>
 <p><strong>Produk:</strong> Abaya modern elegan</p>
 <p><strong>Target:</strong> Wanita muslim usia 18–40</p>
-<p><strong>Value:</strong> Stylish, premium, harga terjangkau</p>
+<p><strong>Value:</strong> Stylish & premium</p>
 </div>
 </div>
 </section>
@@ -279,11 +293,11 @@ Saya aktif mengelola usaha keluarga serta mengembangkan ide bisnis baru.</p>
 <h2>Contact</h2>
 </div>
 
-<div class="card">
-<p>Email: ramafrin28@gmail.com</p>
-<p>HP: 088298776166</p>
-<p>Instagram: ram_fr_99</p>
-<p>TikTok: @rm_frin</p>
+<div class="card contact">
+<p><i class="fa-solid fa-envelope"></i>ramafrin28@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i>088298776166</p>
+<p><i class="fa-brands fa-instagram"></i>ram_fr_99</p>
+<p><i class="fa-brands fa-tiktok"></i>@rm_frin</p>
 </div>
 </div>
 </section>
