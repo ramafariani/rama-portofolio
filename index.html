@@ -11,10 +11,10 @@
 
 <style>
 :root{
---primary:#2563eb;
+--primary:#3b82f6; /* biru cerah */
 --dark:#0f172a;
 --gray:#64748b;
---light:#f8fafc;
+--light:#e0f2fe; /* background biru muda */
 --white:#ffffff;
 }
 
@@ -75,8 +75,8 @@ text-align:center;
 }
 
 .hero img{
-width:140px;
-height:140px;
+width:110px;
+height:110px;
 border-radius:50%;
 object-fit:cover;
 margin-bottom:20px;
@@ -106,6 +106,7 @@ margin:auto;
 margin-bottom:30px;
 }
 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -114,10 +115,16 @@ gap:20px;
 
 /* CARD */
 .card{
-background:#fff;
+background:#f1f5f9; /* abu */
 padding:25px;
 border-radius:12px;
-border:1px solid #eee;
+border:1px solid #e2e8f0;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* ABOUT */
@@ -129,17 +136,18 @@ flex-wrap:wrap;
 }
 
 .about-box img{
-width:150px;
+width:120px;
 border-radius:10px;
 }
 
 /* SKILL */
 .skill{
-background:#e0ecff;
+background:#dbeafe;
 padding:12px;
 border-radius:8px;
 text-align:center;
 color:var(--primary);
+font-weight:500;
 }
 
 /* CONTACT */
@@ -148,6 +156,11 @@ display:block;
 margin-bottom:10px;
 text-decoration:none;
 color:var(--dark);
+transition:0.3s;
+}
+
+.contact a:hover{
+color:var(--primary);
 }
 
 /* FOOTER */
@@ -161,7 +174,6 @@ color:var(--gray);
 
 <body>
 
-<!-- NAVBAR -->
 <header>
 <nav>
 <h2>Rama</h2>
@@ -176,25 +188,22 @@ color:var(--gray);
 </nav>
 </header>
 
-<!-- HOME -->
 <section class="hero" id="home">
 <img src="images/me.jpg">
 <h1>Rama Fariani</h1>
 <p>Mahasiswa Bisnis Digital | Tertarik pada Pengembangan Startup & UMKM</p>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <div class="container">
 <div class="section-title">
-<h2>About Me</h2> 
+<h2>About Me</h2>
 <p><strong>Biodata:</strong> Saya adalah mahasiswa semester 6 jurusan Bisnis Digital, Fakultas Teknologi dan Bisnis di Universitas Yatsi Madani. Saya tertarik di bidang pengembangan usaha dan inovasi bisnis berbasis produk.</p>
 </div>
 
 <div class="card about-box">
 <img src="images/me.jpg">
 <div>
-
 <p><strong>Pendidikan:</strong><br>
 - SMP Darussalam <br>
 - SMA Darussalam (IPS)<br>
@@ -204,11 +213,9 @@ color:var(--gray);
 <p><strong>Minat & Keahlian:</strong> Sedang dalam proses pengembangan</p>
 </div>
 </div>
-
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
 <div class="container">
 <div class="section-title">
@@ -218,14 +225,12 @@ color:var(--gray);
 <div class="grid">
 <div class="skill">Public Speaking</div>
 <div class="skill">Business Plan</div>
-<div class="skill">Customer service & komunikasi</div>
-<div class="skill">problem solving</div>
+<div class="skill">Customer Service & Komunikasi</div>
+<div class="skill">Problem Solving</div>
 </div>
-
 </div>
 </section>
 
-<!-- PORTOFOLIO -->
 <section id="portfolio">
 <div class="container">
 <div class="section-title">
@@ -233,25 +238,21 @@ color:var(--gray);
 </div>
 
 <div class="grid">
-
 <div class="card">
 <h4>Project 1</h4>
-<p>Analisis SEO </p>
-<img src="images/me.jpg" style="width:80%; max-height:200px; object-fit:cover;">
+<p>Analisis SEO</p>
+<img src="images/me.jpg" style="width:100%; max-height:180px; object-fit:cover; border-radius:8px;">
 </div>
 
 <div class="card">
 <h4>Project 2</h4>
-<p>Deskripsi project akan ditambahkan di sini</p>
-<img src="images/me.jpg" style="width:80%; max-height:200px; object-fit:cover;">
+<p>Deskripsi project akan ditambahkan</p>
+<img src="images/me.jpg" style="width:100%; max-height:180px; object-fit:cover; border-radius:8px;">
 </div>
-
 </div>
-
 </div>
 </section>
 
-<!-- BUSINESS IDEA -->
 <section id="business">
 <div class="container">
 <div class="section-title">
@@ -259,16 +260,14 @@ color:var(--gray);
 </div>
 
 <div class="card">
-<p><strong>Nama Bisnis:</strong> mandebumbu</p>
-<p><strong>Jenis Bisnis:</strong> Produk </p>
+<p><strong>Nama Bisnis:</strong> Mandebumbu</p>
+<p><strong>Jenis Bisnis:</strong> Produk</p>
 <p><strong>Target Pasar:</strong> Usia 18 - 45 tahun</p>
 <p><strong>Value Proposition:</strong> Kemurnian rempah 100% alami tanpa bahan kimia</p>
 </div>
-
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <div class="container">
 <div class="section-title">
@@ -284,7 +283,6 @@ color:var(--gray);
 <i class="fa-brands fa-instagram"></i> Instagram
 </a>
 </div>
-
 </div>
 </section>
 
