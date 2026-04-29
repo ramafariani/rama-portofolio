@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>my portofolio | UI/UX Portfolio</title>
+<title>Portofolio Rama Fariani</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- ICON -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -38,8 +37,7 @@ header{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);
+background:#fff;
 border-bottom:1px solid #eee;
 z-index:100;
 }
@@ -57,7 +55,7 @@ color:var(--primary);
 
 nav ul{
 display:flex;
-gap:25px;
+gap:20px;
 list-style:none;
 }
 
@@ -67,25 +65,19 @@ color:var(--dark);
 font-size:14px;
 }
 
-nav a i{
-margin-right:5px;
-color:var(--primary);
-}
-
 /* HERO */
 .hero{
 height:100vh;
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-flex-direction:column;
-padding:0 20px;
 }
 
 .hero img{
-width:130px;
-height:130px;
+width:140px;
+height:140px;
 border-radius:50%;
 object-fit:cover;
 margin-bottom:20px;
@@ -93,28 +85,12 @@ border:4px solid var(--primary);
 }
 
 .hero h1{
-font-size:40px;
-font-weight:700;
-}
-
-.hero span{
-color:var(--primary);
+font-size:32px;
 }
 
 .hero p{
-margin-top:15px;
 color:var(--gray);
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:10px 20px;
-background:var(--primary);
-color:#fff;
-border-radius:8px;
-text-decoration:none;
-font-size:14px;
+margin-top:10px;
 }
 
 /* SECTION */
@@ -128,22 +104,13 @@ margin:auto;
 }
 
 .section-title{
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
-.section-title h2{
-font-size:28px;
-}
-
-.section-title p{
-color:var(--gray);
-}
-
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
 /* CARD */
@@ -152,42 +119,40 @@ background:#fff;
 padding:25px;
 border-radius:12px;
 border:1px solid #eee;
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+/* ABOUT FLEX */
+.about-box{
+display:flex;
+gap:20px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.about-box img{
+width:150px;
+border-radius:10px;
 }
 
 /* SKILL */
 .skill{
-padding:15px;
 background:#e0ecff;
-border-radius:10px;
+padding:12px;
+border-radius:8px;
 text-align:center;
 color:var(--primary);
-font-weight:500;
 }
 
-.skill i{
-font-size:20px;
-margin-bottom:8px;
-display:block;
-}
-
-/* CONTACT ICON */
-.contact p i{
-margin-right:8px;
-color:var(--primary);
+/* CONTACT */
+.contact p{
+margin-bottom:10px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:20px;
 color:var(--gray);
-font-size:14px;
 }
 </style>
 </head>
@@ -199,22 +164,21 @@ font-size:14px;
 <nav>
 <h2>Rama</h2>
 <ul>
-<li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
-<li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
-<li><a href="#skills"><i class="fa-solid fa-lightbulb"></i>Skills</a></li>
-<li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i>Work</a></li>
-<li><a href="#business"><i class="fa-solid fa-rocket"></i>Idea</a></li>
-<li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Me</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#portfolio">Portofolio</a></li>
+<li><a href="#business">Business Idea</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
-<!-- HERO -->
+<!-- HOME -->
 <section class="hero" id="home">
-<img src="images/foto.jpg" alt="Foto Rama">
-<h1>Hi, I'm <span>Rama Fariani</span></h1>
-<p>Mahasiswa & Entrepreneur yang fokus pada pengembangan UMKM dan inovasi bisnis kreatif</p>
-<a href="#portfolio" class="btn">Lihat Portofolio</a>
+<img src="images/foto.jpg">
+<h1>Rama Fariani</h1>
+<p>Mahasiswa & Entrepreneur | Pengembang UMKM</p>
 </section>
 
 <!-- ABOUT -->
@@ -222,14 +186,17 @@ font-size:14px;
 <div class="container">
 <div class="section-title">
 <h2>About Me</h2>
-<p>Perkenalan singkat tentang saya</p>
 </div>
 
-<div class="card">
-<p>Saya adalah mahasiswa yang memiliki minat besar dalam dunia bisnis dan pengembangan UMKM.</p>
+<div class="card about-box">
+<img src="images/foto.jpg">
+<div>
+<p><strong>Biodata:</strong> Mahasiswa yang aktif dalam pengembangan bisnis UMKM.</p>
 <p><strong>Pendidikan:</strong> Mahasiswa aktif</p>
-<p><strong>Fokus:</strong> Bisnis, pemasaran, inovasi produk</p>
+<p><strong>Minat & Keahlian:</strong> Bisnis, pemasaran, inovasi produk</p>
 </div>
+</div>
+
 </div>
 </section>
 
@@ -241,36 +208,37 @@ font-size:14px;
 </div>
 
 <div class="grid">
-<div class="skill"><i class="fa-solid fa-microphone"></i>Public Speaking</div>
-<div class="skill"><i class="fa-solid fa-chart-line"></i>Business Strategy</div>
-<div class="skill"><i class="fa-solid fa-bullhorn"></i>Marketing</div>
-<div class="skill"><i class="fa-solid fa-box"></i>Product Development</div>
+<div class="skill">Public Speaking</div>
 </div>
+
 </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTOFOLIO -->
 <section id="portfolio">
 <div class="container">
 <div class="section-title">
-<h2>My Work</h2>
+<h2>Portofolio</h2>
 </div>
 
 <div class="grid">
+
 <div class="card">
 <h4>Bumbu Giling Minang</h4>
-<p>Mengelola usaha keluarga</p>
+<p>Pengelolaan usaha keluarga</p>
 </div>
 
 <div class="card">
 <h4>Usaha Dimsum</h4>
-<p>Mengembangkan bisnis kuliner</p>
+<p>Pengembangan bisnis kuliner</p>
 </div>
+
 </div>
+
 </div>
 </section>
 
-<!-- BUSINESS -->
+<!-- BUSINESS IDEA -->
 <section id="business">
 <div class="container">
 <div class="section-title">
@@ -278,11 +246,12 @@ font-size:14px;
 </div>
 
 <div class="card">
-<p><strong>Startup:</strong> Rama Signature Abaya</p>
+<p><strong>Nama Startup:</strong> Rama Signature Abaya</p>
 <p><strong>Produk:</strong> Abaya modern elegan</p>
-<p><strong>Target:</strong> Wanita muslim usia 18–40</p>
-<p><strong>Value:</strong> Stylish & premium</p>
+<p><strong>Target Pasar:</strong> Wanita muslim usia 18–40 tahun</p>
+<p><strong>Value Proposition:</strong> Desain stylish, premium, dan harga terjangkau</p>
 </div>
+
 </div>
 </section>
 
@@ -294,11 +263,12 @@ font-size:14px;
 </div>
 
 <div class="card contact">
-<p><i class="fa-solid fa-envelope"></i>ramafrin28@gmail.com</p>
-<p><i class="fa-solid fa-phone"></i>088298776166</p>
-<p><i class="fa-brands fa-instagram"></i>ram_fr_99</p>
-<p><i class="fa-brands fa-tiktok"></i>@rm_frin</p>
+<p>Email: ramafrin28@gmail.com</p>
+<p>Nomor HP: 088298776166</p>
+<p>Instagram: ram_fr_99</p>
+<p>TikTok: @rm_frin</p>
 </div>
+
 </div>
 </section>
 
