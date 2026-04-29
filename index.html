@@ -15,6 +15,7 @@
 --dark:#0f172a;
 --gray:#64748b;
 --light:#f8fafc;
+--white:#ffffff;
 }
 
 *{
@@ -30,18 +31,25 @@ background:var(--light);
 color:var(--dark);
 }
 
+/* NAVBAR */
 header{
 position:fixed;
 width:100%;
 top:0;
 background:#fff;
 border-bottom:1px solid #eee;
+z-index:100;
 }
 
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
+}
+
+nav h2{
+color:var(--primary);
 }
 
 nav ul{
@@ -53,18 +61,16 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:var(--dark);
+font-size:14px;
 }
 
-section{
-padding:90px 8%;
-}
-
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 }
 
@@ -72,39 +78,83 @@ text-align:center;
 width:140px;
 height:140px;
 border-radius:50%;
+object-fit:cover;
 margin-bottom:20px;
+border:4px solid var(--primary);
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+color:var(--gray);
+margin-top:10px;
+}
+
+/* SECTION */
+section{
+padding:90px 8%;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 }
 
-.card{
-background:#fff;
-padding:25px;
-border-radius:10px;
-border:1px solid #eee;
+.section-title{
+margin-bottom:30px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
+/* CARD */
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+border:1px solid #eee;
+}
+
+/* ABOUT */
+.about-box{
+display:flex;
+gap:20px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.about-box img{
+width:150px;
+border-radius:10px;
+}
+
+/* SKILL */
 .skill{
 background:#e0ecff;
-padding:10px;
+padding:12px;
+border-radius:8px;
 text-align:center;
-border-radius:6px;
+color:var(--primary);
 }
 
+/* CONTACT */
 .contact a{
 display:block;
-margin:10px 0;
+margin-bottom:10px;
 text-decoration:none;
 color:var(--dark);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:var(--gray);
 }
 </style>
 </head>
@@ -114,7 +164,7 @@ color:var(--dark);
 <!-- NAVBAR -->
 <header>
 <nav>
-<h3>Rama</h3>
+<h2>Rama</h2>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About Me</a></li>
@@ -126,61 +176,70 @@ color:var(--dark);
 </nav>
 </header>
 
-<!-- A. HOME -->
-<section id="home" class="hero">
+<!-- HOME -->
+<section class="hero" id="home">
 <img src="images/foto.jpg">
 <h1>Rama Fariani</h1>
-<p>Mahasiswa Bisnis Digital yang tertarik pada pengembangan startup</p>
+<p>Mahasiswa Bisnis Digital | Tertarik pada Pengembangan Startup & UMKM</p>
 </section>
 
-<!-- B. ABOUT ME -->
+<!-- ABOUT -->
 <section id="about">
 <div class="container">
+<div class="section-title">
 <h2>About Me</h2>
+</div>
 
-<div class="card">
-<p><strong>Biodata singkat :</strong> saya adalah mahasiswa semester 6 jurusan bisnis digital, Fakultas Teknologi dan bisnis di Universitas yatsi madani, saya tertarik di bidang pengembangan startup dan inovasi produk</p>
+<div class="card about-box">
+<img src="images/foto.jpg">
+<div>
+<p><strong>Biodata:</strong> Saya adalah mahasiswa semester 6 jurusan Bisnis Digital, Fakultas Teknologi dan Bisnis di Universitas Yatsi Madani. Saya tertarik di bidang pengembangan startup dan inovasi bisnis berbasis produk.</p>
 
-<p><strong>Pendidikan :</strong><br>
-smp darussalam<br>
-sma darussalam (jurusan IPS)<br>
-Universitas Yatsi madani 2023 - sekarang
+<p><strong>Pendidikan:</strong><br>
+- SMP Darussalam <br>
+- SMA Darussalam (IPS)<br>
+- Universitas Yatsi Madani (2023 - sekarang)
 </p>
 
-<p><strong>Minat dan keahlian :</strong> masih blm ada</p>
+<p><strong>Minat & Keahlian:</strong> Sedang dalam proses pengembangan</p>
+</div>
 </div>
 
 </div>
 </section>
 
-<!-- C. SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
 <div class="container">
+<div class="section-title">
 <h2>Skills</h2>
+</div>
 
 <div class="grid">
-<div class="skill">Public speaking</div>
-<div class="skill">Business plan</div>
+<div class="skill">Public Speaking</div>
+<div class="skill">Business Plan</div>
 </div>
 
 </div>
 </section>
 
-<!-- D. PORTOFOLIO TEMPLATE -->
+<!-- PORTOFOLIO -->
 <section id="portfolio">
 <div class="container">
+<div class="section-title">
 <h2>Portofolio / Project</h2>
+</div>
 
 <div class="grid">
 
 <div class="card">
-<h4>Judul Project</h4>
-<p>Deskripsi project</p>
+<h4>Project 1</h4>
+<p>Deskripsi project akan ditambahkan di sini</p>
 </div>
 
 <div class="card">
-<h4>Judul Project</h4>
-<p>Deskripsi project</p>
+<h4>Project 2</h4>
+<p>Deskripsi project akan ditambahkan di sini</p>
 </div>
 
 </div>
@@ -188,40 +247,46 @@ Universitas Yatsi madani 2023 - sekarang
 </div>
 </section>
 
-<!-- E. BUSINESS IDEA -->
+<!-- BUSINESS IDEA -->
 <section id="business">
 <div class="container">
+<div class="section-title">
 <h2>Business Idea</h2>
+</div>
 
 <div class="card">
-<p><strong>Nama bisnis :</strong> Rempahku</p>
-<p><strong>Jenis bisnis :</strong> produk</p>
-<p><strong>Target pasar :</strong> remaja hingga dewasa (18 - 45)</p>
-<p><strong>Value proposition :</strong> Kemurnian Rempah 100% Alami, Tanpa Bahan Kimia</p>
+<p><strong>Nama Bisnis:</strong> RempahKita</p>
+<p><strong>Jenis Bisnis:</strong> Produk</p>
+<p><strong>Target Pasar:</strong> Usia 18 - 45 tahun</p>
+<p><strong>Value Proposition:</strong> Kemurnian rempah 100% alami tanpa bahan kimia</p>
 </div>
 
 </div>
 </section>
 
-<!-- F. CONTACT -->
+<!-- CONTACT -->
 <section id="contact">
 <div class="container">
+<div class="section-title">
 <h2>Contact</h2>
+</div>
 
 <div class="card contact">
+<a href="https://wa.me/6288298776166" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
 
 <a href="https://instagram.com/ram_fr_99" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
+<i class="fa-brands fa-instagram"></i> Instagram
 </a>
-
-<a href="https://wa.me/6288298776166" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-
 </div>
 
 </div>
 </section>
+
+<footer>
+<p>© 2026 Rama Fariani</p>
+</footer>
 
 </body>
 </html>
