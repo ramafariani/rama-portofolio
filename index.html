@@ -115,17 +115,23 @@
 
         /* SECTION COMMON */
         section {
-            padding: 100px 8%;
+            padding: 90px 8%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        /* ABOUT ME (MODERN CARD STYLE) */
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark-bg);
+        }
+
+        /* ABOUT ME (POLAROID STYLE) */
         .about-container {
             background-color: var(--dark-card);
             border-radius: 30px;
@@ -152,9 +158,7 @@
             transition: 0.5s;
         }
 
-        .about-image-wrapper:hover img {
-            transform: rotate(0deg);
-        }
+        .about-image-wrapper:hover img { transform: rotate(0deg); }
 
         .about-name-tag {
             position: absolute;
@@ -166,48 +170,19 @@
             font-size: 14px;
         }
 
-        .about-content {
-            flex: 1.5;
-        }
+        .about-content { flex: 1.5; }
 
         .about-content h2 {
             font-size: 50px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 20px;
             line-height: 1;
+            margin-bottom: 20px;
         }
 
-        .about-content h2 span {
-            color: var(--accent);
-        }
+        .about-content h2 span { color: var(--accent); }
 
-        .about-text {
-            font-size: 17px;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
-
-        .btn-contact {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--dark-bg);
-            padding: 14px 35px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .btn-contact:hover {
-            background-color: #f59e0b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(251, 191, 36, 0.3);
-        }
-
-        /* SKILLS & PROJECTS GRID */
+        /* GRID & CARDS */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -237,26 +212,20 @@
         }
 
         /* FOOTER & CONTACT */
-        .contact-box {
-            text-align: center;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-top: 20px;
         }
 
         .social-links a {
-            font-size: 24px;
+            font-size: 28px;
             color: var(--dark-bg);
             transition: 0.3s;
         }
 
-        .social-links a:hover {
-            color: var(--primary);
-        }
+        .social-links a:hover { color: var(--primary); }
 
         footer {
             text-align: center;
@@ -265,20 +234,10 @@
             border-top: 1px solid #eee;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 992px) {
-            .about-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 30px;
-            }
-            .about-image-wrapper {
-                width: 80%;
-                margin: 0 auto;
-            }
-            .about-content h2 {
-                font-size: 40px;
-            }
+            .about-container { flex-direction: column; text-align: center; padding: 30px; }
+            .about-image-wrapper { width: 80%; margin: 0 auto; }
+            .about-content h2 { font-size: 38px; }
         }
     </style>
 </head>
@@ -292,6 +251,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#business">Business Idea</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -309,54 +269,59 @@
                 <img src="images/me.jpg" alt="Rama Fariani">
                 <span class="about-name-tag">Rama Fariani</span>
             </div>
-
             <div class="about-content">
                 <h2>ABOUT <span>ME</span></h2>
-                <div class="about-text">
-                    <p>Halo! Saya adalah mahasiswa semester 6 jurusan <strong>Bisnis Digital</strong> di Universitas Yatsi Madani. Saya memiliki antusiasme tinggi dalam pengembangan startup dan pemberdayaan UMKM melalui teknologi.</p>
-                    <br>
-                    <p>Fokus saya adalah menciptakan strategi bisnis yang efisien, mulai dari perencanaan operasional hingga integrasi teknologi finansial untuk membantu bisnis berkembang di era digital.</p>
+                <div class="about-text" style="color: #cbd5e1; font-size: 17px; margin-bottom: 20px;">
+                    <p>Halo! Saya mahasiswa semester 6 jurusan <strong>Bisnis Digital</strong> di Universitas Yatsi Madani. Saya berfokus pada strategi operasional bisnis dan pemanfaatan teknologi untuk efisiensi UMKM.</p>
                 </div>
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 25px;">Let's build something amazing together!</p>
-                <a href="#contact" class="btn-contact">Hubungi Saya</a>
+                <a href="#contact" class="btn-contact" style="display: inline-block; background-color: var(--accent); color: var(--dark-bg); padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase;">Hubungi Saya</a>
             </div>
         </div>
     </section>
 
     <section id="skills">
         <div class="section-title">
-            <h2 style="font-size: 32px; font-weight: 800;">My Skills</h2>
+            <h2>My Skills</h2>
         </div>
         <div class="grid">
             <div class="skill-tag">Public Speaking</div>
-            <div class="skill-tag">Business Plan</div>
-            <div class="skill-tag">Fintech Strategy</div>
+            <div class="skill-tag">Business Planning</div>
+            <div class="skill-tag">Fintech Integration</div>
             <div class="skill-tag">Problem Solving</div>
-            <div class="skill-tag">Market Analysis</div>
-            <div class="skill-tag">Customer Service</div>
         </div>
     </section>
 
     <section id="portfolio" style="background: #f1f5f9;">
         <div class="section-title">
-            <h2 style="font-size: 32px; font-weight: 800;">Portofolio & Bisnis</h2>
+            <h2>Portofolio & Project</h2>
         </div>
         <div class="grid">
             <div class="card">
-                <h3 style="margin-bottom: 15px; color: var(--primary);">Mandebumbu</h3>
-                <p style="color: var(--text-muted);">Inovasi produk rempah 100% alami tanpa bahan kimia. Menargetkan pasar modern yang peduli kesehatan.</p>
+                <h4 style="color: var(--primary); margin-bottom: 10px;">Analisis SEO</h4>
+                <p style="color: var(--text-muted); font-size: 15px;">not yet.</p>
             </div>
             <div class="card">
-                <h3 style="margin-bottom: 15px; color: var(--primary);">Rama Signature Abaya</h3>
-                <p style="color: var(--text-muted);">Pengembangan brand fashion premium dengan optimasi SEO dan sistem pembayaran digital yang terintegrasi.</p>
+                <h4 style="color: var(--primary); margin-bottom: 10px;">PROJECT KITA</h4>
+                <p style="color: var(--text-muted); font-size: 15px;">not yet.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-box">
+    <section id="business">
         <div class="section-title">
-            <h2 style="font-size: 32px; font-weight: 800;">Get In Touch</h2>
-            <p>Tertarik untuk berkolaborasi atau sekadar menyapa?</p>
+            <h2>Business Idea</h2>
+        </div>
+        <div class="card" style="max-width: 800px; margin: 0 auto; border-left: 5px solid var(--accent);">
+            <h3 style="margin-bottom: 10px;">Mandebumbu</h3>
+            <p><strong>Value Proposition:</strong> Kemurnian rempah 100% alami tanpa bahan kimia.</p>
+            <p style="margin-top: 10px; color: var(--text-muted);">Solusi bumbu praktis untuk masyarakat modern (usia 18-45 tahun) yang mengutamakan kesehatan dan kualitas bahan masakan tanpa pengawet.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Ayo berdiskusi tentang inovasi bisnis dan teknologi digital.</p>
         </div>
         <div class="social-links">
             <a href="https://wa.me/6288298776166" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
@@ -365,7 +330,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Rama Fariani. Dibuat dengan semangat kewirausahaan digital.</p>
+        <p>&copy; 2026 Rama Fariani. Terinspirasi oleh desain modern digital.</p>
     </footer>
 
 </body>
